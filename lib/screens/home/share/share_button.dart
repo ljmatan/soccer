@@ -3,7 +3,7 @@ import 'dart:io' as io;
 import 'package:flutter/material.dart';
 import 'package:share/share.dart';
 import 'package:soccer/logic/i18n/i18n.dart';
-import 'package:soccer/values/values.dart';
+import 'package:soccer/global/values.dart';
 
 class ShareButton extends StatelessWidget {
   @override

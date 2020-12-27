@@ -1,8 +1,10 @@
-enum Cached { music }
+enum Cached { music, locale }
 
 extension CachedExtension on Cached {
   String get label {
     switch (this) {
+      case Cached.locale:
+        return 'locale';
       case Cached.music:
         return 'music';
       default:

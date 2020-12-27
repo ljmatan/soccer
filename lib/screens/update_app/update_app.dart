@@ -1,7 +1,7 @@
 import 'dart:io' as io;
 
 import 'package:flutter/material.dart';
-import 'package:soccer/values/values.dart';
+import 'package:soccer/global/values.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class UpdateAppScreen extends StatelessWidget {

@@ -2,10 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:soccer/logic/cache/prefs.dart';
 
 class ToggleButton extends StatefulWidget {
-  final String label;
+  final String label, value;
   final Function(bool) onTap;
 
-  ToggleButton({@required this.label, @required this.onTap});
+  ToggleButton({
+    @required this.label,
+    @required this.onTap,
+    @required this.value,
+  });
 
   @override
   State<StatefulWidget> createState() {
@@ -19,7 +23,7 @@ class _ToggleButtonState extends State<ToggleButton> {
   @override
   void initState() {
     super.initState();
-    _active = Prefs.instance.getBool(widget.label) ?? true;
+    _active = Prefs.instance.getBool(widget.value) ?? true;
   }
 
   @override
@@ -58,7 +62,7 @@ class _ToggleButtonState extends State<ToggleButton> {
       onTap: () async {
         widget.onTap(_active);
         setState(() => _active = !_active);
-        await Prefs.instance.setBool(widget.label, _active);
+        await Prefs.instance.setBool(widget.value, _active);
       },
     );
   }

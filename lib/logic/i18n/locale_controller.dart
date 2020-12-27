@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:soccer/logic/cache/prefs.dart';
+import 'package:soccer/global/values.dart';
 
 abstract class AppLocale {
   static String _languageCode;
@@ -10,7 +11,7 @@ abstract class AppLocale {
 
   static void init() {
     _streamController = StreamController.broadcast();
-    _languageCode = Prefs.instance.getString('locale') ?? 'en';
+    _languageCode = Prefs.instance.getString(Cached.locale.label) ?? 'en';
   }
 
   static Stream get stream => _streamController.stream;
@@ -19,7 +20,7 @@ abstract class AppLocale {
     if (_languageCode != newLanguageCode) {
       _languageCode = newLanguageCode;
       _streamController.add(newLanguageCode);
-      Prefs.instance.setString('locale', newLanguageCode);
+      Prefs.instance.setString(Cached.locale.label, newLanguageCode);
     }
   }
 }

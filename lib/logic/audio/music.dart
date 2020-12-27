@@ -1,5 +1,6 @@
 import 'package:audioplayers/audio_cache.dart';
 import 'package:audioplayers/audioplayers.dart';
+import 'package:soccer/global/values.dart';
 import 'package:soccer/logic/cache/prefs.dart';
 
 abstract class MusicPlayer {
@@ -16,7 +17,7 @@ abstract class MusicPlayer {
 
   static void init() async {
     _audioCache = AudioCache();
-    final bool _active = Prefs.instance.getBool('MUSIC') ?? true;
+    final bool _active = Prefs.instance.getBool(Cached.music.label) ?? true;
     _player = await getAudioPlayer('music.mp3');
     if (!_active) await _player.pause();
     _player.setVolume(1);

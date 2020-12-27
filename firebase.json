@@ -1,0 +1,26 @@
+{
+  "functions": {
+    "ignore": [
+      ".dart_tool",
+      ".packages",
+      "**/build/*.map",
+      "**/build/packages",
+      "build.yaml",
+      "node",
+      "node_modules",
+      "pubspec.*"
+    ],
+    "source": "functions",
+    "predeploy": [
+      "npm --prefix \"$RESOURCE_DIR\" run lint"
+    ]
+  },
+  "emulators": {
+    "functions": {
+      "port": 5001
+    },
+    "ui": {
+      "enabled": true
+    }
+  }
+}

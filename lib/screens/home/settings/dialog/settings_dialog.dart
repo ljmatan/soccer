@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:soccer/global/values.dart';
 import 'package:soccer/logic/audio/music.dart';
 import 'package:soccer/logic/i18n/i18n.dart';
 import 'package:soccer/screens/home/settings/dialog/language_button.dart';
@@ -60,10 +61,12 @@ class _SettingsDialogState extends State<SettingsDialog> {
                                 onTap: (value) => value
                                     ? MusicPlayer.stop()
                                     : MusicPlayer.play(),
+                                value: Cached.music.label,
                               ),
                               ToggleButton(
                                 label: 'EFFECTS',
                                 onTap: (value) => null,
+                                value: null,
                               ),
                             ],
                           ),
@@ -74,6 +77,7 @@ class _SettingsDialogState extends State<SettingsDialog> {
                             ToggleButton(
                               label: 'NOTIFICATIONS',
                               onTap: (value) => null,
+                              value: null,
                             ),
                             LanguageButton(onTap: () => _enterLanguageMenu()),
                           ],
