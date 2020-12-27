@@ -1,0 +1,52 @@
+name: soccer
+description: Penalty and free kick shooter.
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Unity platform view
+  flutter_unity_widget: ^3.0.2
+
+  # Cache storage
+  shared_preferences: ^0.5.12+4
+
+  # Launch actions such as send email or open play store
+  url_launcher: ^5.7.10
+
+  # Audio player, supports multiple audio sources
+  audioplayers: ^0.17.0
+
+  # Info on the app version
+  package_info: ^0.4.3+2 
+
+  # Share functionality
+  share: ^0.6.5+4
+
+  # HTTP package used for sending requests to server
+  http: ^0.12.2 
+
+  # Firebase flu
+  firebase_core: ^0.5.3
+  firebase_auth: ^0.18.4+1
+  firebase_messaging: ^7.0.3
+  # firebase_admob: ^0.10.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  integration_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/
