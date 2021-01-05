@@ -27,17 +27,20 @@ dependencies:
   # Info on the app version
   package_info: ^0.4.3+2 
 
+  # Device info
+  device_info: ^1.0.0
+
   # Share functionality
   share: ^0.6.5+4
 
   # HTTP package used for sending requests to server
   http: ^0.12.2 
 
-  # Firebase flu
+  # Firebase section
   firebase_core: ^0.5.3
   firebase_auth: ^0.18.4+1
   firebase_messaging: ^7.0.3
-  # firebase_admob: ^0.10.3
+  firebase_admob: ^0.10.3
 
   # Item purchasing
   in_app_purchase: ^0.3.4+16

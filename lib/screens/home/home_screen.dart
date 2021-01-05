@@ -16,13 +16,29 @@ class HomeScreen extends StatelessWidget {
               alignment: Alignment.topRight,
               child: SettingsButton(),
             ),
-            FlatButton(
-              child: Text(I18N.home('tap me')),
-              onPressed: () => Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (BuildContext context) => PenaltyScreen(),
+            Column(
+              children: [
+                FlatButton(
+                  child: Text('Tap shoot'),
+                  onPressed: () => Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (BuildContext context) => PenaltyScreen(
+                        scene: 1,
+                      ),
+                    ),
+                  ),
                 ),
-              ),
+                FlatButton(
+                  child: Text('Swipe shoot'),
+                  onPressed: () => Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (BuildContext context) => PenaltyScreen(
+                        scene: 2,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
             Padding(
               padding: const EdgeInsets.fromLTRB(12, 0, 12, 12),
